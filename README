@@ -20,6 +20,9 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
    ./scripts/feeds install -a
    make menuconfig 
 
+[看到另外一个大神的视频](https://www.youtube.com/watch?v=_L-OzDPjxpM)   
+在配置好后，用 `make download` 下载完成后，再执行`make download` 看是否全部下载成功，然后编译，用的编译命令是 `make V=99`  
+
 5. 最后选好你要的路由，输入 make -j1 V=s （-j1 后面是线程数。第一次编译推荐用单线程，国内请尽量全局科学上网）即可开始编译你要的固件了。
 
 本套代码保证肯定可以编译成功。里面包括了 R9 所有源代码，包括 IPK 的。
