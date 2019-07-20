@@ -20,8 +20,11 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
    ./scripts/feeds install -a
    make menuconfig 
 
+---------------------------------------------------------------------
 [看到另外一个大神的视频](https://www.youtube.com/watch?v=_L-OzDPjxpM)   
-在配置好后，用 `make download` 下载完成后，再执行`make download` 看是否全部下载成功，然后编译，用的编译命令是 `make V=99`  
+在配置好后，用 `make download` 下载完成后，再执行`make download` 看是否全部下载成功，然后编译，用的编译命令是 `make V=99`
+或者下载其它大神提供的dl下载目录，拷贝到lede 目录下，执行 make downloa 检查下载的依赖包是否完整，然后再编译。
+---------------------------------------------------------------------
 
 5. 最后选好你要的路由，输入 make -j1 V=s （-j1 后面是线程数。第一次编译推荐用单线程，国内请尽量全局科学上网）即可开始编译你要的固件了。
 
